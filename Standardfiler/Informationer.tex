@@ -1,0 +1,81 @@
+\fancyfoot[R,L,C]{}
+
+\ifthenelse{\equal{\docklasse}{report}}
+	{\chapter*{Informationer}}
+	{\section*{Informations}}
+
+\noindent
+\hvisdansk{
+\begin{tabular}{ll}
+	Institution: & Syddansk Universitet -- Det Tekniske Fakultet\\
+	Kursuskode: & \kursuskode \\
+	Projekttitel: & \korttitel \\
+	Projektgruppe: & \gruppenummer \\
+	%
+	\ifnum \VejlederAntal = 1	
+		Vejleder: & \vejlederA, \href{mailto:\vejledermailA}{\vejledermailA} \\
+	\fi
+	\ifnum \VejlederAntal > 1
+		Vejledere: & \vejlederA, \href{mailto:\vejledermailA}{\vejledermailA} \\
+			& \vejlederB, \href{mailto:\vejledermailB}{\vejledermailB} \\
+	\fi	
+	\ifnum \VejlederAntal > 2
+		& \vejlederC, \href{mailto:\vejledermailC}{\vejledermailC} \\
+	\fi	
+	%	
+	Projektperiode: & \startdato\ -- \afleveringsdato \\
+	Sideantal: & \pageref{LastPage} sider 
+		\ifnum \totvalue{BilagSider} > 0
+			(heraf bilag: \total{BilagSider} \ifnum \totvalue{BilagSider} = 1 side\else sider\fi) 
+		\fi \\
+	\\ Underskrifter:
+\end{tabular}
+}{
+\begin{tabular}{ll}
+	Institution: & University of Southern Denmark -- The Technical Faculty\\
+	Course code: & \kursuskode \\
+	Project title: & \korttitel \\
+	Project group: & \gruppenummer \\
+	%
+	\ifnum \VejlederAntal = 1	
+		Supervisor: & \vejlederA, \href{mailto:\vejledermailA}{\vejledermailA} \\
+	\fi
+	\ifnum \VejlederAntal > 1
+		Supervisors: & \vejlederA, \href{mailto:\vejledermailA}{\vejledermailA} \\
+			& \vejlederB, \href{mailto:\vejledermailB}{\vejledermailB} \\
+	\fi	
+	\ifnum \VejlederAntal > 2
+		& \vejlederC, \href{mailto:\vejledermailC}{\vejledermailC} \\
+	\fi	
+	%	
+	Project period: & \startdato\ -- \afleveringsdato \\
+	Number of pages: & \pageref{LastPage} pages 
+		\ifnum \totvalue{BilagSider} > 0
+			(hereof appendices: \total{BilagSider} \ifnum \totvalue{BilagSider} = 1 page\else pages\fi) 
+		\fi \\
+	\\ Signatures:
+\end{tabular}
+}
+
+\vspace{2cm}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\noindent
+\begin{tabularx}{\hsize}{XX}
+\rule{.9\hsize}{.3pt} 				& 	\rule{.9\hsize}{.3pt} 			\\
+\navnA							 	& 	\navnB				 			\\
+\href{mailto:\mailA}{\mailA}		& 	\href{mailto:\mailB}{\mailB}	\\\\\\\\
+%
+\rule{.9\hsize}{.3pt} 				& 	\rule{.9\hsize}{.3pt} 			\\
+\navnC								& 	\navnD							\\
+\href{mailto:\mailC}{\mailC}		& 	\href{mailto:\mailD}{\mailD}	\\\\\\\\
+%
+\rule{.9\hsize}{.3pt} 				& 	\rule{.9\hsize}{.3pt} 			\\
+\navnE				 				& 	\navnF		 					\\
+\href{mailto:\mailE}{\mailE}		& 	\href{mailto:\mailF}{\mailF}	\\
+\end{tabularx}
+%
+%
+\clearpage
+\StandardFooter
