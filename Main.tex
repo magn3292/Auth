@@ -1,0 +1,52 @@
+\newcommand{\docklasse}{article}			% vælg report eller article
+\newcommand{\AbstractVisible}{true}			% Resumé på forside
+\newcommand{\HandindateVisible}{true}		% Afleveringsdato på forside
+\newcommand{\GroupVisible}{true}			% Gruppenummer på forside
+\newcommand{\NamesVisible}{true}			% Navne og mails på forside
+\newcommand{\danish}{true}					% true=dansk rapport, false=engelsk rapport
+
+\input{Standardfiler/Preamble}
+\input{Standardfiler/Projektdata}
+\addbibresource{Standardfiler/Bibfil.bib}	% Flere bibfiler kan tilføjes
+
+\begin{document}
+%
+\input{Standardfiler/Forside}
+\blankside
+\input{Standardfiler/Informationer}
+%\blankside
+\tableofcontents
+%
+%
+%
+%
+%
+%
+%
+%------------------------------------------------
+% Litteraturliste
+%------------------------------------------------
+\hvisdansk%
+	{\printbibliography[heading=bibnumbered,title=Litteratur]}%
+	{\printbibliography[heading=bibnumbered]}
+%	
+%
+%************************************************
+% Bilag
+\setcounter{BilagSider}{-\thepage}
+%************************************************
+%\startbilag
+%	
+%
+%------------------------------------------------
+% Ord- og symbolliste 	Kan pt. kun bruges med report klassen
+%------------------------------------------------
+%	\let\stdchapter\chapter
+%	\def\chapter*#1{\stdchapter{#1}\label{symbolliste}}
+%	\printnomenclature[2cm]
+%	\let\chapter\stdchapter
+%
+%************************************************
+\addtocounter{BilagSider}{\thepage}
+%************************************************
+\end{document}

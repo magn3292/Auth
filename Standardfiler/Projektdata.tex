@@ -1,0 +1,54 @@
+% ==================================================================
+% ============== Titler og navne ===================================
+% ==================================================================
+\newcommand{\korttitel}{Expert in Teams}
+\newcommand{\langtitel}{Formula Student -- Tracktion Control}
+
+\newcommand{\ForfatterAntal}{6}
+
+\newcommand{\navnA}{Anders Ellinge}
+\newcommand{\mailA}{aelli14@student.sdu.dk}
+
+\newcommand{\navnB}{Jacob Alexander Damkjær}
+\newcommand{\mailB}{jadam14@student.sdu.dk}
+
+\newcommand{\navnC}{Jacob Gjervig Strømvig}
+\newcommand{\mailC}{jstro14@student.sdu.dk}
+
+\newcommand{\navnD}{Magnus Værbak}
+\newcommand{\mailD}{mavae14@student.sdu.dk}
+
+\newcommand{\navnE}{Sune Straarup Jensen}
+\newcommand{\mailE}{sujen13@student.sdu.dk}
+
+\newcommand{\navnF}{William Bergmann Børresen}
+\newcommand{\mailF}{wiboe14@student.sdu.dk}
+
+\newcommand{\afleveringsdato}{??.\ ???? 2016}
+
+
+% Bruges til informationsside
+\newcommand{\kursuskode}{F-EIT5-U02}
+\newcommand{\gruppenummer}{6}	% Kan også bruges på forsiden
+\newcommand{\startdato}{6.\ september 2015}
+
+
+\newcommand{\VejlederAntal}{3}
+
+\newcommand{\vejlederA}{Ashok Kumar Singh}
+\newcommand{\vejledermailA}{asi@mmmi.sdu.dk}
+
+\newcommand{\vejlederB}{Nicolai Casper Christensen}
+\newcommand{\vejledermailB}{nchri12@student.sdu.dk}
+
+\newcommand{\vejlederC}{Poul Erik Vesterløkke}
+\newcommand{\vejledermailC}{pve@sam.sdu.dk}
+
+% ==================================================================
+% ============== Metadata ==========================================
+% ==================================================================											
+% Pdf'ens metadata defineres (\AtBeginDocument kaldes, da dette ellers skulle defineres efter \korttitel m.m. er defineret)
+\AtBeginDocument{				%OBS. Hvis hyperrefpakken udkommenteres giver dette fejl	
+	\hypersetup{pdftitle={\korttitel}		% Metadata
+				,pdfauthor={Sune Straarup Jensen}		% Metadata
+				,pdfsubject={\langtitel}}}	% Metadata
